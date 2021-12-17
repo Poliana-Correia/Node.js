@@ -4,6 +4,6 @@
 //console.log(path.basename(_filename))
 
 // Meus modulos
-const myModule = require('./Praticando/exports')
+const myModule = require('./exports')
 
 console.log(myModule)
