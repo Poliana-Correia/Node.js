@@ -1,0 +1,7 @@
+// claerTimeout cancela um timeOut
+
+const timeOut = 3000
+const finished = () => console.log('Done!')
+
+let timer = setTimeout(finished, timeOut)
+clearTimeout(timer) // cancela quanquer timeOut da aplicação

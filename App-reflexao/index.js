@@ -3,6 +3,7 @@
 
 
 const questions = [
+    "Qual seu nome?",
     "O que aprendi hoje?",
     "O que me deixou aborrecido? O que eu poderia fazer para melhorar?",
     "O que me deixou feliz hoje?",
@@ -29,18 +30,18 @@ process.stdin.on("data", data => {
 
 process.on('exit', () => {
     console.log(`
-        Bacana Poliana!
+        Bacana ${answers[0]}!
         
         O que vc aprendeu hoje foi :
-        ${answers[0]}
-
-        O que te aborreceu e vc poderia melhorar foi:
         ${answers[1]}
 
-        O que te deixou feliz hoje:
+        O que te aborreceu e vc poderia melhorar foi:
         ${answers[2]}
 
-        Vc ajudou ${answers[3]} pessoa(s) hoje!!
+        O que te deixou feliz hoje:
+        ${answers[3]}
+
+        Vc ajudou ${answers[4]} pessoa(s) hoje!!
 
         Volte amanhã para novas reflexões!
     `)
