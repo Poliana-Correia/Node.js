@@ -7,14 +7,46 @@ app.set("view engine", "ejs");         //falando pro express que a ferramente qu
                                        //set é um metodo detro do express
 
 app.get("/", function (req, res){      //criando uma rota ref. ao nome do nosso site , get metodo detro do express
-    res.render("index"); //o que vamos dar de resposta ? renderizar o index
+    const items = [
+        {
+            title: "D",
+            message: "esenvolver aplicações/serviços de forma fácil"
+        },
+        {
+            title: "E",
+            message: "JS usa Javascript para renderizar HTML"
+        },
+        {
+            title: "M",
+            message: "uito fácil de usar (kkkk)"
+        },
+        {
+            title: "A",
+            message: "prender o básico é nescessário"
+        },
+        {
+            title: "I",
+            message: "nstall ejs"
+        },
+        {
+            title: "S",
+            message: "intaxe simples"
+        },
+    ];
+
+    const subtitle = "Uma linguagem de modelagem para criação de páginas HTML utilizando JavaScript"
+    
+    res.render("pages/index", {
+        qualitys: items, 
+        subtitle: subtitle,
+    }); 
 })
 
 app.get("/sobre", function (req, res){       
-    res.render("about");
+    res.render("pages/about");          //o que vamos dar de resposta ? renderizar o index
 })
 
 app.listen(8080); //falando pro servidor que esta rodando na nossa maquina, 
                   //e quando chamarmos a porta 8080 vai rodar tudo o que foi feito aqui
 
-console.log("Rodando")                
+console.log("Servidor rodando...")                
